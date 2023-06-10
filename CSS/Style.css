@@ -1,0 +1,243 @@
+/* Selecting elements by the element type
+This is a blunt tool and assigns formatting to everything
+*/
+
+* {
+    margin: 0; 
+    padding: 0;
+}
+
+body{
+    position: relative;
+    line-height: 1.25; /*space between lines*/
+    font-size: 1.5rem; 
+    font-family: sans-serif;
+    color: rgb(82, 81, 81);    
+    height: 100%;
+    width: 100%;
+    background-image: url("../images/Kraftwerk_Dusseldorf_Original.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+}
+
+/* 
+**************************************************************************************************************/
+
+/* This is assigning formatting based on the class, in this case the class called "headerband".
+Every element assigned to this class will have the same formatting. Note that a class element supercedes an element selection so if you format all divs{},
+and then assign formatting to specific divs using a class name, the div{} code will be ignore for the divs in the class
+*/
+
+#top_header{
+    position: sticky;
+    top: 0px;
+    left: 0px;
+    z-index: 1; /* z-index 1 means this is in front. All other objects will scroll behind it */
+    background-color: rgb(51, 51, 48);
+    color: #e40e0e;
+    font-size: 4em;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, 1px -1px 0 #000, 1px 1px 0 #000;
+}
+
+#con_dusseldorf_photo{
+    position: relative;
+    Top: 280px;
+}
+
+
+/* 
+**************************************************************************************************************/
+
+#This_is_what_we_do{
+    position:relative;
+    Top: 250px;
+    background-color: rgb(51, 51, 48);
+    color: #e40e0e;
+    font-size: 4em;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, 1px -1px 0 #000, 1px 1px 0 #000;
+}
+
+
+/* 
+**************************************************************************************************************/
+
+
+#This_is_who_we_are{
+    position:relative;
+    Top: 250px;
+    background-color: rgb(51, 51, 48);
+    color: #e40e0e;
+    font-size: 4em;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, 1px -1px 0 #000, 1px 1px 0 #000;
+}
+
+
+
+#Our_Manifesto{
+    position:relative;
+    Top: 250px;
+    background-color: rgb(51, 51, 48);
+    border-bottom: 20px white;
+    color: #e40e0e;
+    font-size: 4em;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, 1px -1px 0 #000, 1px 1px 0 #000;
+}
+
+#standardtext{
+    position:relative;
+    Top:250px;
+    font-size: 2em;
+    line-height: 1.8; /*space between lines*/
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-color: rgb(51, 51, 48);
+    color: lightgray;
+    border-top: 5px solid lightgray; 
+    border-bottom: 5px solid lightgray; 
+
+}
+
+
+#Find_Us{
+    position:relative;
+    Top: 250px;
+    background-color: rgb(51, 51, 48);
+    color: #e40e0e;
+    font-size: 4em;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, 1px -1px 0 #000, 1px 1px 0 #000;
+}
+
+
+.headerband{
+    background-color: rgb(51, 51, 48);
+    color: #e40e0e;
+    border: 5px solid rgb(87, 87, 87);
+    font-size: 2em;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, 1px -1px 0 #000, 1px 1px 0 #000;
+
+}
+
+
+/* img{
+    height:100%;
+    width: 100%;
+    object-fit: contain;
+} */
+
+/* 
+**************************************************************************************************************/
+
+/* https://www.sitepoint.com/position-css-property/ */
+/* 
+The two robot images below are within this container element.
+The position: relative influences how this element interacts with the elements around it.
+As this is set to relative, the other elements are positioned relative to its natural position
+You can offset its location relative to its natural location but as long as position: relative, other elements will treat it as if it is in its natural location, not moved. 
+*/
+/* #top_section{
+    position: relative; 
+} */
+
+
+#container_robot_outer{
+    padding: 1.5%;
+    background-color: rgb(75, 74, 74);
+    /* border: 5px solid rgb(130, 226, 20); */
+    position: relative; 
+    Top: 250px;
+    height:674px;
+
+}
+
+#container_robot_inner{
+    padding: 1.5%;
+    /* background-color: rgb(68, 179, 86); */
+    /* border: 5px solid rgb(130, 226, 20); */
+    position: relative; 
+    Top: -700px;
+    width: 1480px;
+    left: 1500px;
+    height:600px;
+
+}
+
+/* 
+Position relative in conjunction with the two lines below offsets the image relative  from its natural positions. Other elements will lay themselves out as the would based on its original position, not where it is now.
+If position is set to absolute, this tells the elements around it to treat it as if it doesn't exist. Therefore, the element positions immediately following it may appear to have moved ahead of it but but it is really moving to where it would naturally be if the element with position: absolute wasn't there. 
+
+Position: fixed will lock the element in place and it will not respond to scrolling. The other element in the container will move as if it wasn't there. This can be useful if you want to lock an element in place when scrolling
+*/
+#Robot_Image{
+    /* border: 20px red; */
+    position: sticky; 
+    margin: 1%;
+    /* border: 5px solid white; */
+    /*z-index: 1; /* z-index 1 means this is in front. All other objects will scroll behind it */
+    /* top: 100px;
+    left: 100px; */
+}
+
+
+#Shoot_To_Kill{
+    /* background-color: yellow; */
+    position: relative;
+    /* top: -476px; */
+    /* border: 5px solid black; */
+    text-align: justify;
+    font-size: 8em;
+    color: lightgray;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+}
+
+#container_what_we_do{
+    background-color: rgb(153, 151, 151);
+    position:relative;
+    Top:250px;
+
+}
+
+
+#container_find_us{
+    background-color: rgb(153, 151, 151);
+    position:relative;
+    Top:250px;
+
+}
+
+/* 
+position: fixed keeps an element locked to its location when the page scrolls 
+
+*/
+
+
+
+/* 
+**************************************************************************************************************/
+
+
+#Robot_Text_Test{
+    font-size: larger;
+    color: red;
+    font-weight: bold;
+}
+
+.contact_icons{
+    height: 10%;
+    width: 10%;
+}
+
+
+/* .work_section_image{
+    background-color: black;
+} */
+
+/* img{
+    border: 25px solid rgb(131, 130, 130)
+} */
